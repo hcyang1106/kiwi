@@ -28,7 +28,9 @@ def clockin(update: Update, context: CallbackContext):
                     id = user["id"]
                     password = user["password"]
 
-        driver = webdriver.Chrome(ChromeDriverManager().install())
+        chrome_options = Options()
+        chrome_options.add_argument("--headless")
+        driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
         driver.maximize_window()
 
         driver.get("https://cloud.nueip.com/login/83663709")
