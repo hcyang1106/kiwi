@@ -40,21 +40,21 @@ def clockin(update: Update, context: CallbackContext):
         elem.send_keys(password)
         elem.send_keys(Keys.RETURN)
 
-        # driver.execute_cdp_cmd(
-        #     "Browser.grantPermissions",
-        #     {
-        #         "origin": "https://cloud.nueip.com/home",
-        #         "permissions": ["geolocation"]
-        #     },
-        # )
-        # driver.execute_cdp_cmd("Emulation.setGeolocationOverride",
-        #                        {
-        #                            "latitude": 25.02283095064086,
-        #                            "longitude": 121.54949954857622,
-        #                            "accuracy": 99.9999,
-        #                        }, )
-        # js = 'document.getElementById("clockin").click();'
-        # driver.execute_script(js)
+        driver.execute_cdp_cmd(
+            "Browser.grantPermissions",
+            {
+                "origin": "https://cloud.nueip.com/home",
+                "permissions": ["geolocation"]
+            },
+        )
+        driver.execute_cdp_cmd("Emulation.setGeolocationOverride",
+                               {
+                                   "latitude": 25.02283095064086,
+                                   "longitude": 121.54949954857622,
+                                   "accuracy": 99.9999,
+                               }, )
+        js = 'document.getElementById("clockin").click();'
+        driver.execute_script(js)
     except:
         update.message.reply_text("打卡失敗")
         return
@@ -89,21 +89,21 @@ def clockout(update: Update, context: CallbackContext):
         elem.send_keys(password)
         elem.send_keys(Keys.RETURN)
 
-        # driver.execute_cdp_cmd(
-        #     "Browser.grantPermissions",
-        #     {
-        #         "origin": "https://cloud.nueip.com/home",
-        #         "permissions": ["geolocation"]
-        #     },
-        # )
-        # driver.execute_cdp_cmd("Emulation.setGeolocationOverride",
-        #                        {
-        #                            "latitude": 25.02283095064086,
-        #                            "longitude": 121.54949954857622,
-        #                            "accuracy": 99.9999,
-        #                        }, )
-        # js = 'document.getElementById("clockout").click();'
-        # driver.execute_script(js)
+        driver.execute_cdp_cmd(
+            "Browser.grantPermissions",
+            {
+                "origin": "https://cloud.nueip.com/home",
+                "permissions": ["geolocation"]
+            },
+        )
+        driver.execute_cdp_cmd("Emulation.setGeolocationOverride",
+                               {
+                                   "latitude": 25.02283095064086,
+                                   "longitude": 121.54949954857622,
+                                   "accuracy": 99.9999,
+                               }, )
+        js = 'document.getElementById("clockout").click();'
+        driver.execute_script(js)
     except:
         update.message.reply_text("打卡失敗")
         return
