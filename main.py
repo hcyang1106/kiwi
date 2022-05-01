@@ -17,7 +17,7 @@ updater = Updater("5251317898:AAGfF6Z_sR45lH8mcSdd2WeyBU34Ncri2m4",
 
 
 def clockin(update: Update, context: CallbackContext):
-    update.message.reply_text("已請求Howger幫打卡")
+    update.message.reply_text("已請求Howger幫打上班卡")
 
     try:
         with open("users.yaml", 'r') as stream:
@@ -64,7 +64,7 @@ def clockin(update: Update, context: CallbackContext):
 
 
 def clockout(update: Update, context: CallbackContext):
-    update.message.reply_text("已請求Howger幫打卡")
+    update.message.reply_text("已請求Howger幫打下班卡")
 
     try:
         with open("users.yaml", 'r') as stream:
