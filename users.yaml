@@ -1,0 +1,4 @@
+-
+  username: "test_username" # telegram帳號
+  id: "test_id"             # nueip帳號
+  password: "test_password" # nueip密碼
