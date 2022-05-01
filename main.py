@@ -136,6 +136,7 @@ def unknown_text(update: Update, context: CallbackContext):
 
 updater.dispatcher.add_handler(CommandHandler('start', start))
 updater.dispatcher.add_handler(CommandHandler('clockout', clockout))
+updater.dispatcher.add_handler(CommandHandler('clockin', clockin))
 updater.dispatcher.add_handler(CommandHandler('help', help))
 updater.dispatcher.add_handler(MessageHandler(Filters.text, unknown))
 updater.dispatcher.add_handler(MessageHandler(
